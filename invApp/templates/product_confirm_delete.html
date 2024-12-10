@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %} Product List {% endblock %}
+
+{% block content %}
+    <h1>Are you sure want to delete this product?</h1>
+    <form action="" method="POST" class="text-center">
+    {% csrf_token %}
+    <button type="submit"  class="btn btn-danger">Delete</button>
+        <a href="{% url 'product_list' %}" class="btn btn-secondary">
+            Cancel
+        </a>
+    </form>
+{% endblock %}
